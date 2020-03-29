@@ -1,0 +1,96 @@
+<div class="row stories-row">
+  <font class="stories-font">Stories</font>
+  <div class="col-md-12 col-sm-12 d-flex justify-content-start align-items-center storiesContain">
+    <div class="hover01">
+      <button class="story-btn" (click)="openModel()">
+        <div>
+          <figure>
+            <div mat-card-avatar class="storybull">
+              <font class="create-story"><i class="material-icons">album</i></font>
+            </div>
+          </figure>
+        </div>
+      </button>
+    </div>
+    <div class="hover01">
+      <button class="story-btn">
+        <div>
+          <figure>
+            <div mat-card-avatar class="storybull"></div>
+          </figure>
+        </div>
+      </button>
+    </div>
+    <div class="hover01">
+      <button class="story-btn">
+        <div>
+          <figure>
+            <div mat-card-avatar class="storybull"></div>
+          </figure>
+        </div>
+      </button>
+    </div>
+    <div class="hover01">
+      <button class="story-btn">
+        <div>
+          <figure>
+            <div mat-card-avatar class="storybull"></div>
+          </figure>
+        </div>
+      </button>
+    </div>
+    <div class="hover01">
+      <button class="story-btn">
+        <div>
+          <figure>
+            <div mat-card-avatar class="storybull"></div>
+          </figure>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div>Some tags before</div>
+
+<font class="stories-font">Stories</font>
+
+<owl-carousel-o [options]="customOptions">
+
+  <ng-container *ngFor="let slide of stories">
+    <ng-template carouselSlide [id]="slide">
+      <div class="hover01">
+        <button class="story-btn">
+          <div>
+            <figure>
+              <div mat-card-avatar class="storybull"></div>
+            </figure>
+          </div>
+        </button>
+      </div>
+    </ng-template>
+  </ng-container>
+
+</owl-carousel-o>
+
+
+
+
+<div>Some tags afterr</div>
+<app-storie-item [test]="isOpenmodel"></app-storie-item>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+ 
+      <div class="modal-body px-0">
+        <img src="./../../../assets/imgs/beauty.png" alt="">
+      </div>
+   
+  </div>
+</div>

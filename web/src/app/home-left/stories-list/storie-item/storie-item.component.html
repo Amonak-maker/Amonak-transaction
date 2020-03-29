@@ -1,0 +1,68 @@
+<!-- The Modal -->
+<div id="myModal" class="modal" [ngStyle]="{display: test?'block':'none'}">
+
+  <!-- The Close Button -->
+  <span class="close" (click)="close()">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+
+
+
+  <!--lehna aaa zaid -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container-fluide">
+
+    <div class="row">
+      <div class="col-sm-8" style="display: block;
+        margin-left: auto;
+        margin-right: auto;">
+
+        <div id="carouselExampleIndicators" class="carousel " data-ride="carousel">
+          <div class="carousel-indicators" style="top: 10px; width: inherit;    color: white;">
+
+
+            <div>
+              <img src="{{storyImages[activeStory].user.img}}" class="userImg" alt="">
+              <span class="ml-4">{{storyImages[activeStory].user.name}}</span>
+            </div>
+
+
+          </div>
+          <div class="carousel-inner">
+            <div *ngFor="let story of storyImages;let j=index" class="carousel-item  text-center "
+              [ngClass]="{'active': j==0}">
+              <img src={{story.img}} class="bigStoryImg" alt="..." height="auto">
+            </div>
+
+          </div>
+          <a class="carousel-control-prev" (click)="previousStory()" href="#carouselExampleIndicators" role="button"
+            data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" (click)="nextStory()" href="#carouselExampleIndicators" role="button"
+            data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
